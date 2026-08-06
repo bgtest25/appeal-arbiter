@@ -1,0 +1,281 @@
+{
+  "agreement": 0.9444444444444444,
+  "confusion_matrix": {
+    "uphold": {
+      "uphold": 8,
+      "overturn": 0,
+      "escalate": 0
+    },
+    "overturn": {
+      "uphold": 0,
+      "overturn": 8,
+      "escalate": 0
+    },
+    "escalate": {
+      "uphold": 1,
+      "overturn": 0,
+      "escalate": 1
+    }
+  },
+  "metrics": {
+    "uphold": {
+      "precision": 0.8888888888888888,
+      "recall": 1.0,
+      "f1": 0.9411764705882353,
+      "support": 8
+    },
+    "overturn": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 8
+    },
+    "escalate": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "support": 2
+    }
+  },
+  "specialist_accuracy": {
+    "evidence": 0.9444444444444444,
+    "policy": 0.8888888888888888,
+    "precedent": 0.9444444444444444
+  },
+  "cases": [
+    {
+      "case_id": "case-001",
+      "category": "Safety violations",
+      "ground_truth": "uphold",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "uphold"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists concur on upholding the permanent ban, and their reasoning is mutually reinforcing rather than merely coincidental. The evidence specialist confirms that the appellant's own account corroborates the objective content summary (a minor in a costume/cosplay context, sexualized framing), leaving no factual dispute \u2014 only a claim about lack of intent, which is not exculpatory under a zero-tolerance framework. The policy specialist confirms the guideline text unambiguously classifies 'content that sexualizes minors in any way' as a Safety violation, with no carve-out for costume context or claimed innocent intent. The precedent specialist appropriately declined to force analogies to unrelated cases (adult content labeling, stunt safety, artistic nudity), correctly noting that CSAM-adjacent violations are treated as a categorically distinct, non-negotiable class where contextual mitigating factors that apply elsewhere (labeling, artistic merit, safety precautions) do not apply here. This absence of a forced precedent match is not a disagreement \u2014 it reflects the specialist's judgment that no genuine precedent tension exists, which aligns with rather than contradicts the other two assessments. Since evidence, policy, and precedent all converge without any substantive conflict, the panel upholds the original permanent ban."
+    },
+    {
+      "case_id": "case-002",
+      "category": "Monetization fraud & abuse",
+      "ground_truth": "uphold",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "escalate"
+      },
+      "specialists_disagreed": true,
+      "supervisor_reasoning": "Evidence and Policy specialists independently converge on uphold with clear, case-specific reasoning: the objective facts show a dramatic, specific promise (\"something you won't believe \ud83d\udd25\") paired with a completely unrelated payload (a recipe video), and this maps precisely onto the cited policy language defining deceptive unlock promises on Sealed Posts (the policy's own example\u2014implying a shocking reveal then delivering unrelated content\u2014is essentially this case). The appellant's rebuttal (\"it's just marketing\") does not contest the factual mismatch, so the evidentiary and policy bases for the violation are undisputed and decisive.\n\nThe Precedent specialist's escalate recommendation is not a genuine disagreement on the merits\u2014it explicitly reasons that this case is distinguishable from the only same-subtype precedent (case-003) because case-003 involved a vague tease paired with topically related content from the same creator, whereas this case involves a specific, hype-driven promise paired with totally unrelated content. The precedent specialist itself concludes the current facts are \"more aligned with the core harm\" the rule targets and that upholding would be reasonable; its escalation stems from the absence of a squarely-matching precedent rather than from any factual or policy ambiguity. Since both the Evidence and Policy specialists ground their uphold conclusions directly in unambiguous case facts and explicit guideline text (not in contested inference), and the Precedent specialist's own analysis leans toward the same conclusion despite recommending escalation on procedural grounds, the more decisive and directly applicable reasoning here is the Evidence/Policy alignment. This is not a case of genuine substantive ambiguity \u2014 it's a lack of a perfectly on-point precedent, which the clear evidence-policy match sufficiently resolves. Final decision: uphold the content removal."
+    },
+    {
+      "case_id": "case-003",
+      "category": "Monetization fraud & abuse",
+      "ground_truth": "overturn",
+      "predicted": "overturn",
+      "specialist_outcomes": {
+        "evidence": "overturn",
+        "policy": "overturn",
+        "precedent": "overturn"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists concur, and their reasoning is mutually reinforcing rather than merely coincidental. The evidence specialist confirms the unlocked content was topically continuous with the tease (same creator, same content genre - dance video), not a deceptive substitution. The policy specialist confirms the applicable guideline requires a specific false promise (e.g., implying nudity then delivering unrelated content), and 'unlock for a surprise' is too vague/generic to constitute such a specific deceptive promise, especially when the payoff was thematically related. The precedent specialist correctly distinguishes this case from case-002, where the unlocked content was genuinely unrelated (recipe video vs. a promised surprise), which is the key fact that justified upholding in that precedent. Here, the topical relatedness of the unlocked dance video undercuts the deceptive-intent element central to the engagement-baiting violation. Since evidence, policy text, and precedent all independently converge on the same conclusion for consistent reasons - lack of a deceptive gap between tease and delivered content - there is no genuine ambiguity requiring escalation. The panel unanimously supports overturning the temporary suspension."
+    },
+    {
+      "case_id": "case-004",
+      "category": "Harassment & bullying",
+      "ground_truth": "uphold",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "uphold"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists \u2014 evidence, policy, and precedent \u2014 independently reached the same conclusion: uphold the content removal. The evidence specialist confirmed the appellant does not dispute posting the home address and phone number, only offers a justification (prior public listing) that does not negate current non-consensual sharing in a hostile, post-dispute context. The policy specialist confirmed a direct textual match to the doxxing guideline under Harassment & bullying, with no applicable exception (consent, legitimate purpose, etc.) present. The precedent specialist found this case materially aligned with case-015 (non-consensual disclosure of private/identifying information causing exposure to harm), correctly distinguishing it from case-005, which involved protected critical speech without private information disclosure. Since there is unanimous agreement across independent lines of analysis, with no genuine ambiguity or conflicting rationale, the original content_removal action is upheld."
+    },
+    {
+      "case_id": "case-005",
+      "category": "Harassment & bullying",
+      "ground_truth": "overturn",
+      "predicted": "overturn",
+      "specialist_outcomes": {
+        "evidence": "overturn",
+        "policy": "overturn",
+        "precedent": "overturn"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists independently reached the same conclusion, and their reasoning is mutually reinforcing rather than merely coincidental. The evidence specialist confirms the objective content summary shows on-topic, sharp criticism without personal attacks, insults, or threats\u2014distinguishing a mere user flag (which only triggers review) from actual proof of a violation. The policy specialist confirms this content does not meet any of the three defined categories of harassment & bullying in the guidelines (targeted harassment, encouragement of others to harass, or doxxing), since critique of creative/editorial work is not equivalent to targeting a person maliciously. The precedent specialist confirms that past upheld harassment cases (NCII, doxxing) involved categorically more severe conduct\u2014non-consensual intimate content or real-world safety risks\u2014making them poor analogues; no precedent supports treating pointed but civil critique as harassment. Because the evidence, policy text, and precedent history all converge on the same conclusion for the same underlying reason (the conduct does not resemble harassment as defined and applied in this platform's guidelines and case history), there is no genuine ambiguity requiring escalation. The consensus is well-grounded and decisive: overturn the warning."
+    },
+    {
+      "case_id": "case-006",
+      "category": "Hate speech & discrimination",
+      "ground_truth": "uphold",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "uphold"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists concur: the evidence confirms an ethnic slur was used and repeated three times for emphasis, which the appellant does not dispute factually (only offering a \"song lyric\" justification). The policy specialist confirms this squarely matches the \"Slurs and dehumanizing language\" prohibition under Hate speech & discrimination, with no exempting context (no quotation/educational/counter-speech framing evident). The precedent specialist distinguishes this case from prior overturned or escalated cases (case-007's political caricature lacked protected-characteristic targeting; case-018 had only a borderline ambiguous phrase in a policy discussion context), finding this case to be a clear, non-ambiguous paradigmatic violation given the repetition and lack of mitigating framing. Since evidence, policy, and precedent all align without contradiction, the panel upholds the original permanent_ban decision."
+    },
+    {
+      "case_id": "case-007",
+      "category": "Hate speech & discrimination",
+      "ground_truth": "overturn",
+      "predicted": "overturn",
+      "specialist_outcomes": {
+        "evidence": "overturn",
+        "policy": "overturn",
+        "precedent": "overturn"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists independently reached the same conclusion, and their reasoning is mutually reinforcing rather than merely coincidental. The evidence specialist confirmed the objective content summary shows political satire/caricature targeting policy positions with explicit absence of protected-characteristic references. The policy specialist confirmed this content fails to meet any substantive criteria in the hate speech & discrimination guideline (no attack on protected characteristics, no slurs, no hate group support). The precedent specialist confirmed no similar past case supports upholding removal absent protected-characteristic targeting - distinguishing the closest analog (case-018) precisely because it contained explicit discriminatory language that is absent here, and correctly noting case-006 (slurs) and case-015 (harassment/NCII) are inapposite. There is no genuine disagreement to reconcile: all three specialists converge on the same clear gap between the cited violation reason (hate speech, which requires protected-characteristic targeting) and the actual content (policy satire with no such targeting). The unanimous, well-grounded consensus across independent evidentiary, policy-text, and precedent analyses justifies overturning the original content_removal action."
+    },
+    {
+      "case_id": "case-008",
+      "category": "Sexual content",
+      "ground_truth": "uphold",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "uphold"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists independently reach the same conclusion, and their reasoning is mutually reinforcing rather than merely coincidental. The evidence specialist confirms the objective content summary establishes explicit sexual activity and, critically, that no protective label was applied \u2014 directly rebutting the appellant's sole factual claim. The policy specialist confirms this content falls squarely within the cited guideline's definition of prohibited pornographic/sexually explicit content, with no mitigating factors (artistic, educational, or labeling) present. The precedent specialist examined the available comparison cases and correctly distinguished them: case-001 involved a far more severe minor-safety harm category, case-009 was overturned specifically because of a genuinely applied label and artistic non-explicit context, and case-012 involved a different policy area with visible safety mitigations. None of these precedents support overturning here, since this case lacks any of the mitigating features present in the cases that were previously overturned. Since the evidentiary record, policy text, and precedent pattern all converge without contradiction, this is a clear consensus case rather than one requiring adjudication between competing specialist views. The original content_removal decision is upheld."
+    },
+    {
+      "case_id": "case-009",
+      "category": "Sensitive content",
+      "ground_truth": "overturn",
+      "predicted": "overturn",
+      "specialist_outcomes": {
+        "evidence": "overturn",
+        "policy": "overturn",
+        "precedent": "overturn"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists independently reached the same conclusion, and their reasoning is mutually reinforcing rather than merely coincidental. The evidence specialist confirmed the objective facts: this is a fine-art nude sculpture that the appellant proactively self-labeled as 'Sensitive Content \u2014 Nudity' at upload, and the only basis for action was an automated pending-review flag, not a substantiated finding of a policy breach. The policy specialist grounded this in the actual guideline text, which explicitly categorizes artistic nudity as 'sensitive content' to be tagged for viewer opt-out rather than prohibited content, with the sole carve-out being sexually explicit material \u2014 which is absent here. The precedent specialist correctly distinguished this case from the two uphold precedents (explicit sexual activity with no labeling, and child sexualization), both of which involve materially more severe categories, and instead analogized to a precedent where responsible, transparent handling of borderline content led to overturn. Since the evidence, the applicable policy text, and precedent all converge without any genuine tension or ambiguity, there is a clear consensus: the appellant engaged in exactly the compliant behavior the policy calls for (self-labeling artistic nudity), and the original warning rested on a routine automated flag rather than an actual violation. The warning should be overturned."
+    },
+    {
+      "case_id": "case-010",
+      "category": "Intellectual property",
+      "ground_truth": "uphold",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "uphold"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists independently reached the same conclusion: uphold. The evidence specialist confirmed the appellant's own account (crediting in comments) does not contradict the core objective fact that the post itself lacked attribution for a fully re-uploaded video. The policy specialist found this conduct squarely matches two cited guideline categories: copyright infringement and claiming others' work as one's own. The precedent specialist, while noting no closely analogous past cases existed, still concluded on the merits that full reupload without attribution is a clear-cut violation under standard IP enforcement norms, with no precedent suggesting leniency in such circumstances. Since evidence, policy, and precedent all converge without genuine conflict \u2014 the precedent specialist's lack of matching cases is not a disagreement but an acknowledgment that the case must be decided on its clear merits, which it did in the same direction as the other two \u2014 there is no ambiguity requiring escalation. The consensus is unanimous and well-supported, so the original content removal action is upheld."
+    },
+    {
+      "case_id": "case-011",
+      "category": "Misinformation",
+      "ground_truth": "escalate",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "escalate"
+      },
+      "specialists_disagreed": true,
+      "supervisor_reasoning": "The evidence and policy specialists both independently and directly support upholding the removal: the objective content summary shows an unsourced, factually-framed claim that a home remedy cures a serious illness, which squarely matches the 'Health misinformation that could cause harm' policy category. These two assessments are decisive because they are grounded in direct, on-point application of the evidence and the governing guideline text to the specific facts of this case\u2014there is no ambiguity in how the content was presented, and the policy match is unambiguous and explicit.\n\nThe precedent specialist's 'escalate' recommendation does not reflect substantive disagreement with the merits of the case; rather, it reflects an absence of closely analogous past cases in the retrieved set (the available precedents concern doxxing, IP infringement, and product labeling \u2014 none touching health misinformation). This is a limitation of the precedent database, not evidence that the removal was wrongly applied or that genuine ambiguity exists about the correct outcome. Where evidence and policy analysis are clear and concordant, and precedent is merely silent/inapplicable rather than conflicting, it is appropriate to rely on the evidence and policy findings rather than escalate solely because no matching precedent was found. Escalation is reserved for cases where specialists actually reach conflicting substantive conclusions about the correct outcome; here, no specialist affirmatively argues for overturning the action.\n\nTherefore, the final decision is to uphold the original content_removal action, consistent with the evidence and policy specialists' concordant and directly applicable findings."
+    },
+    {
+      "case_id": "case-012",
+      "category": "Dangerous & illegal activities",
+      "ground_truth": "overturn",
+      "predicted": "overturn",
+      "specialist_outcomes": {
+        "evidence": "overturn",
+        "policy": "overturn",
+        "precedent": "overturn"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists independently converge on overturn, and their reasoning is mutually reinforcing rather than merely coincidental. The evidence specialist confirms the objective video content matches the appellant's claim: visible harness, spotters, padded surface, and a verbal disclaimer against imitation\u2014directly contradicting the 'reckless dangerous challenge' characterization used for the original suspension. The policy specialist correctly notes the cited guideline targets 'dangerous challenges that could cause harm,' and that this content's explicit safety precautions and anti-imitation disclaimer undercut the core harm rationale the policy is designed to address; the other retrieved excerpts (illegal activity instructions, minor sexualization) are irrelevant. The precedent specialist appropriately discounts two retrieved 'uphold' precedents as inapposite (different categories entirely) and instead relies on the one true same-category precedent, case-017, which was overturned specifically because mitigating safety context reduced actual risk of harm\u2014a rationale that applies with even greater force here given the physical safety measures and explicit verbal warning present. No genuine ambiguity exists: all three independent lines of analysis (facts, policy text, precedent) align on the same conclusion for the same underlying reason\u2014documented, deliberate risk mitigation negates the 'dangerous challenge' classification. Consensus is confirmed and the original temporary_suspension should be overturned."
+    },
+    {
+      "case_id": "case-013",
+      "category": "Live stream & Watch Together abuse",
+      "ground_truth": "overturn",
+      "predicted": "overturn",
+      "specialist_outcomes": {
+        "evidence": "overturn",
+        "policy": "overturn",
+        "precedent": "overturn"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists\u2014evidence, policy, and precedent\u2014independently converge on overturning the action, and their reasoning is mutually reinforcing rather than merely coincidental. The evidence specialist establishes the factual predicate: the objective record shows the co-host, not the host, introduced the explicit content without the host's knowledge or consent. The policy specialist confirms that the governing guideline's language ('hijacking a Watch Together party to share content the host did not authorize') is explicitly framed around the hijacker's conduct, meaning the host\u2014as the victim of the hijack\u2014falls outside the class of persons the policy is meant to penalize. The precedent specialist adds that this is a misattribution scenario distinguishable from cases where the flagged account was the actual source of the violating content (case-008, case-010), and instead aligns with case-003's principle that enforcement should not proceed where there is a mismatch between the framing of the violation and the actual responsible party. Since evidence, policy text, and precedent all point the same direction with no genuine tension or ambiguity between them, this is a clear consensus case rather than one requiring escalation. The original content_removal action against the host's account should be overturned, though the panel notes the co-host who actually introduced the explicit content may separately warrant enforcement review, which is outside the scope of this appeal."
+    },
+    {
+      "case_id": "case-014",
+      "category": "Monetization fraud & abuse",
+      "ground_truth": "uphold",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "uphold"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists converge on uphold, and their reasoning is mutually reinforcing rather than merely coincidental agreement. The evidence specialist identifies concrete, technical fingerprints of coordinated abuse (6 accounts, same device, same payment method, concentrated 2-week timing) that the appellant's generic 'they're just supportive friends' claim never actually addresses \u2014 the appellant offers no account of why independent friends would share a single device and payment instrument. The policy specialist confirms this fact pattern maps directly and unambiguously onto explicit guideline language covering self-gifting through alternate accounts/coordinated-gifting rings, so there's no interpretive gap between facts and policy text. The precedent specialist appropriately declines to force-fit distinguishable precedents (Sealed Post content-mismatch cases, an unrelated harassment case) rather than manufacturing false consistency, and independently evaluates the merits, still landing on uphold given the strength and specificity of the device/payment-linked evidence. Because all three lines of analysis \u2014 factual, policy-textual, and precedent-based (via reasoned non-reliance rather than a conflicting on-point case) \u2014 agree, and because the appellant's rebuttal fails to engage with the dispositive technical facts, this is a genuine consensus rather than a disagreement requiring escalation. The original permanent_ban decision is upheld."
+    },
+    {
+      "case_id": "case-015",
+      "category": "Harassment & bullying",
+      "ground_truth": "uphold",
+      "predicted": "uphold",
+      "specialist_outcomes": {
+        "evidence": "uphold",
+        "policy": "uphold",
+        "precedent": "uphold"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists concur without material tension. The evidence review confirms the appellant admits the operative facts\u2014an identifiable ex-partner, an intimate image, a naming caption\u2014and only disputes a claimed 'right' to post, not the presence of consent, which is legally and factually irrelevant to whether the depicted person consented. The policy review finds a direct, unambiguous textual match to the 'Revenge porn or non-consensual intimate imagery' provision under Harassment & bullying, with no interpretive gap. The precedent review supports upholding via a closely analogous, even less severe case (case-004, unauthorized exposure of private info), correctly distinguishing this case from overturned precedent (case-005, mere critical commentary) and noting this fact pattern is arguably more clear-cut than prior upheld cases given NCII is categorically prohibited. Since evidence, policy, and precedent all independently converge on the same conclusion with no genuine factual, textual, or consistency ambiguity, there is no basis for escalation or overturning. The appellant's stated defense is a rights/entitlement argument that does not contest any of the elements required for the violation finding. Decision: uphold the original content removal."
+    },
+    {
+      "case_id": "case-016",
+      "category": "Violence & threats",
+      "ground_truth": "overturn",
+      "predicted": "overturn",
+      "specialist_outcomes": {
+        "evidence": "overturn",
+        "policy": "overturn",
+        "precedent": "overturn"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists \u2014 evidence, policy, and precedent \u2014 independently converge on overturn, with no substantive disagreement to reconcile. The evidence specialist confirms the flag stemmed solely from a context-blind keyword match on 'kill' within the idiomatic phrase 'this outfit kills it,' with no indication of actual violent intent or threat. The policy specialist confirms that the retrieved 'Violence & threats' and 'sensitive content' guidelines require graphic violence, gore, weapon instructions, or depictions of injury/aggression \u2014 none of which are present here; idiomatic language is not covered by the cited policy text. The precedent specialist confirms that past upheld cases (slurs, non-consensual imagery, sexualized content involving a minor) all involved confirmed, substantive violations upon review, making them meaningfully distinguishable from this false-positive keyword trigger; no precedent supports upholding a warning for idiomatic language. Since evidence, policy, and precedent all point the same direction for the same underlying reason \u2014 this is a false positive from mechanical keyword matching rather than a genuine violation \u2014 the consensus is clear and decisive. The original warning should be overturned."
+    },
+    {
+      "case_id": "case-017",
+      "category": "Dangerous & illegal activities",
+      "ground_truth": "overturn",
+      "predicted": "overturn",
+      "specialist_outcomes": {
+        "evidence": "overturn",
+        "policy": "overturn",
+        "precedent": "overturn"
+      },
+      "specialists_disagreed": false,
+      "supervisor_reasoning": "All three specialists\u2014evidence, policy, and precedent\u2014independently reached the same conclusion: overturn. The evidence specialist confirmed the content is a factual comparative review of legal OTC supplements using only label-printed dosing information, with no promotion of misuse or illicit substances. The policy specialist confirmed the cited guideline (promotion of illegal drugs/substances) does not extend to legal, publicly sold supplements or label-sourced dosing info. The precedent specialist found no closely on-point precedent supporting removal, and the closest analogous case (case-012) supports overturning when content is presented factually/responsibly without encouraging harm. Since there is unanimous agreement across all three independent lines of analysis, with no substantive disagreement to reconcile, the original content_removal decision is overturned."
+    },
+    {
+      "case_id": "case-018",
+      "category": "Hate speech & discrimination",
+      "ground_truth": "escalate",
+      "predicted": "escalate",
+      "specialist_outcomes": {
+        "evidence": "escalate",
+        "policy": "overturn",
+        "precedent": "escalate"
+      },
+      "specialists_disagreed": true,
+      "supervisor_reasoning": "Two of the three specialists (evidence and precedent) independently converge on escalation, and their reasoning is substantively strong: the post is a mixed fact pattern with a genuine, objectively-confirmed 'othering' sentence about a protected group embedded in an otherwise legitimate policy argument. Neither existing precedent line (protected-characteristic-free policy critique that was overturned, vs. overt slur-based hate speech that was upheld) cleanly matches this case, and the evidence specialist confirms the flagged sentence is real and not merely a decontextualized quote \u2014 meaning the ambiguity is genuine, not manufactured by one side ignoring facts.\n\nThe policy specialist's overturn recommendation is well-reasoned on the narrow question of whether the sentence meets the technical bar for 'attack,' 'slur,' or 'dehumanizing language,' but it resolves the ambiguity by definitional fiat rather than grappling with the precedent specialist's point that 'people like them' does invoke a protected characteristic in a generalized way that sits between the two precedent lines. The policy specialist doesn't address why this phrase should be treated as categorically insufficient rather than a borderline case warranting human judgment on proportionality (i.e., does one sentence's tenor justify full content removal for the whole post, or should it be weighed against the dominant policy framing?).\n\nBecause this is a case of genuine evidentiary and doctrinal ambiguity \u2014 a novel fact pattern not resolved by existing precedent, with objectively confirmed facts that could reasonably support either reading \u2014 escalation is the correct outcome rather than picking a side. The evidence and precedent specialists' convergence on this point, grounded in the absence of a clean precedent match and the real (not merely alleged) presence of an othering statement, is more decisive than the policy specialist's narrower textual reading, which understates the interpretive judgment call actually at stake."
+    }
+  ]
+}

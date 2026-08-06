@@ -1,0 +1,182 @@
+[
+  {
+    "id": "case-001",
+    "category": "Safety violations",
+    "original_action": "permanent_ban",
+    "content_summary": "Account posted content sexualizing a minor in a costume context.",
+    "original_violation_reason": "CSAM / sexualization of a minor — zero tolerance.",
+    "user_appeal_statement": "I didn't mean anything by it, it was just a cosplay photo of my niece.",
+    "ground_truth_outcome": "uphold",
+    "rationale": "Zero-tolerance policy applies regardless of claimed intent; the content objectively sexualizes a minor per the evidence."
+  },
+  {
+    "id": "case-002",
+    "category": "Monetization fraud & abuse",
+    "original_action": "content_removal",
+    "content_summary": "Sealed Post captioned 'unlock to see something you won't believe 🔥' that, once unlocked, contained an unrelated recipe video.",
+    "original_violation_reason": "Engagement-baiting on Sealed Posts with deceptive unlock promises.",
+    "user_appeal_statement": "It's just marketing, everyone does teaser captions.",
+    "ground_truth_outcome": "uphold",
+    "rationale": "Caption implies a specific dramatic reveal; the unlocked content is unrelated — this is the exact example the guidelines call out."
+  },
+  {
+    "id": "case-003",
+    "category": "Monetization fraud & abuse",
+    "original_action": "temporary_suspension",
+    "content_summary": "Sealed Post caption said 'unlock for a surprise'; the unlocked content was a different but topically related dance video from the same creator.",
+    "original_violation_reason": "Automated system flagged as engagement-baiting.",
+    "user_appeal_statement": "My caption was generic, not deceptive, and the content matches my usual style.",
+    "ground_truth_outcome": "overturn",
+    "rationale": "A vague-but-not-deceptive caption paired with genuinely related content doesn't meet the 'deceptive unlock promise' bar the guidelines describe — the automated flag overreached."
+  },
+  {
+    "id": "case-004",
+    "category": "Harassment & bullying",
+    "original_action": "content_removal",
+    "content_summary": "Comment thread where a user posted another user's full home address and phone number after a dispute.",
+    "original_violation_reason": "Doxxing — sharing private information without consent.",
+    "user_appeal_statement": "That info is publicly available on their old business listing.",
+    "ground_truth_outcome": "uphold",
+    "rationale": "Guidelines prohibit sharing private information without consent regardless of whether it's findable elsewhere; posting it in a hostile context after a dispute is textbook doxxing intent."
+  },
+  {
+    "id": "case-005",
+    "category": "Harassment & bullying",
+    "original_action": "warning",
+    "content_summary": "User replied to a creator's post with sharp but on-topic criticism of their editing choices, no personal attacks.",
+    "original_violation_reason": "Flagged by another user as harassment.",
+    "user_appeal_statement": "I was critiquing their content, not attacking them personally.",
+    "ground_truth_outcome": "overturn",
+    "rationale": "Guidelines explicitly encourage 'constructive feedback... respectful critiques'; the content described contains no targeting or bullying, just criticism — looks like report abuse, not real harassment."
+  },
+  {
+    "id": "case-006",
+    "category": "Hate speech & discrimination",
+    "original_action": "permanent_ban",
+    "content_summary": "Video caption used a known slur targeting an ethnic group, repeated three times for emphasis.",
+    "original_violation_reason": "Hate speech — slurs and dehumanizing language.",
+    "user_appeal_statement": "It's a word used commonly in music lyrics I was quoting.",
+    "ground_truth_outcome": "uphold",
+    "rationale": "Guidelines prohibit slurs outright; quoting-as-defense doesn't change that the slur was posted and reached the platform's audience."
+  },
+  {
+    "id": "case-007",
+    "category": "Hate speech & discrimination",
+    "original_action": "content_removal",
+    "content_summary": "Post satirizing a political figure's policy positions using exaggerated caricature, no reference to protected characteristics.",
+    "original_violation_reason": "Reported as hate speech by multiple users.",
+    "user_appeal_statement": "This is political satire about policy, not about any protected group.",
+    "ground_truth_outcome": "overturn",
+    "rationale": "Guidelines define hate speech as attacking protected characteristics; policy-position satire about a public figure doesn't meet that bar even if provocative — looks like report brigading, not an actual violation."
+  },
+  {
+    "id": "case-008",
+    "category": "Sexual content",
+    "original_action": "content_removal",
+    "content_summary": "Video depicts two adult performers in explicit sexual activity, no protective label applied.",
+    "original_violation_reason": "Pornographic / sexually explicit content.",
+    "user_appeal_statement": "I marked it as Sensitive Content — Nudity.",
+    "ground_truth_outcome": "uphold",
+    "rationale": "Guidelines are explicit that sexually explicit content is never permitted 'regardless of category' of sensitive-content labeling — the label doesn't cure the underlying prohibition."
+  },
+  {
+    "id": "case-009",
+    "category": "Sensitive content",
+    "original_action": "warning",
+    "content_summary": "Photo of a fine-art nude sculpture, marked Sensitive Content — Nudity by the user at upload.",
+    "original_violation_reason": "Auto-flagged pending review for nudity.",
+    "user_appeal_statement": "I labeled it correctly per the guidelines, it's artistic and non-explicit.",
+    "ground_truth_outcome": "overturn",
+    "rationale": "Guidelines explicitly carve out 'artistic nudity' as a valid Sensitive Content category, and the user complied with the labeling requirement — this is an auto-flag needing confirmation, not an actual violation."
+  },
+  {
+    "id": "case-010",
+    "category": "Intellectual property",
+    "original_action": "content_removal",
+    "content_summary": "User re-uploaded another creator's full video with only a different caption and no attribution on the post itself.",
+    "original_violation_reason": "Copyright infringement — claiming others' work as your own.",
+    "user_appeal_statement": "I gave credit in the comments.",
+    "ground_truth_outcome": "uphold",
+    "rationale": "A buried comment credit doesn't cure a full unauthorized re-upload presented on the post itself as the appellant's content."
+  },
+  {
+    "id": "case-011",
+    "category": "Misinformation",
+    "original_action": "content_removal",
+    "content_summary": "Post claims a specific home remedy cures a serious illness, cites no source, presented as factual medical advice.",
+    "original_violation_reason": "Health misinformation that could cause harm.",
+    "user_appeal_statement": "It's just my personal experience/opinion, not medical advice.",
+    "ground_truth_outcome": "escalate",
+    "rationale": "Genuinely contested: personal-anecdote framing vs. factual-claim framing is a real gray area the guidelines don't resolve cleanly, and the consequences of getting it wrong in either direction are real — warrants human review."
+  },
+  {
+    "id": "case-012",
+    "category": "Dangerous & illegal activities",
+    "original_action": "temporary_suspension",
+    "content_summary": "Video shows a user performing a stunt with visible safety precautions (harness, spotters, padded surface) and a verbal disclaimer not to attempt it.",
+    "original_violation_reason": "Dangerous challenge that could cause harm.",
+    "user_appeal_statement": "I included every safety precaution and a disclaimer, this isn't reckless content.",
+    "ground_truth_outcome": "overturn",
+    "rationale": "Guidelines target dangerous challenges as a class, but visible safety measures and an explicit disclaimer meaningfully change the risk profile — closer to stunt content with precautions than a viral dangerous-challenge video."
+  },
+  {
+    "id": "case-013",
+    "category": "Live stream & Watch Together abuse",
+    "original_action": "content_removal",
+    "content_summary": "A Watch Together session was hijacked mid-stream by a co-host who played unrelated explicit content without the host's consent.",
+    "original_violation_reason": "Host's account was flagged for the incident.",
+    "user_appeal_statement": "I didn't share that content, my co-host did without my knowledge.",
+    "ground_truth_outcome": "overturn",
+    "rationale": "Guidelines specifically define this violation as 'hijacking a Watch Together party to share content the host did not authorize' — the violation as written is attributable to the hijacker, not the host; the wrong account was actioned."
+  },
+  {
+    "id": "case-014",
+    "category": "Monetization fraud & abuse",
+    "original_action": "permanent_ban",
+    "content_summary": "Investigation found 6 accounts sending coordinated gifts to a single account from the same device and payment method over a 2-week period.",
+    "original_violation_reason": "Self-gifting through alternate accounts to extract payouts.",
+    "user_appeal_statement": "Those are my friends' accounts, they just like supporting me.",
+    "ground_truth_outcome": "uphold",
+    "rationale": "A coordinated gifting pattern from the same device/payment method across multiple accounts is precisely the evidentiary signature the guidelines describe for self-gifting rings; 'friends supporting me' doesn't explain the shared device and payment method."
+  },
+  {
+    "id": "case-015",
+    "category": "Harassment & bullying",
+    "original_action": "content_removal",
+    "content_summary": "A non-consensual intimate image of an ex-partner posted with a caption naming them.",
+    "original_violation_reason": "Revenge porn / non-consensual intimate imagery.",
+    "user_appeal_statement": "They're my ex, I have the right to post photos of my own relationship.",
+    "ground_truth_outcome": "uphold",
+    "rationale": "Guidelines prohibit non-consensual intimate imagery outright regardless of the poster's relationship to the subject; consent to the relationship isn't consent to post intimate images."
+  },
+  {
+    "id": "case-016",
+    "category": "Violence & threats",
+    "original_action": "warning",
+    "content_summary": "Original artwork post got auto-flagged by a keyword filter for containing the word 'kill' in an unrelated caption ('this outfit kills it').",
+    "original_violation_reason": "Automated keyword match for violent language.",
+    "user_appeal_statement": "It's a common expression, not a threat.",
+    "ground_truth_outcome": "overturn",
+    "rationale": "Clear keyword-filter false positive — no actual violent content or threat present, idiomatic usage the automated system isn't equipped to distinguish."
+  },
+  {
+    "id": "case-017",
+    "category": "Dangerous & illegal activities",
+    "original_action": "content_removal",
+    "content_summary": "Post reviews and compares over-the-counter supplement brands, including standard dosing info printed on the product labels.",
+    "original_violation_reason": "Flagged for promotion of substances.",
+    "user_appeal_statement": "These are legal OTC supplements, this is a product review.",
+    "ground_truth_outcome": "overturn",
+    "rationale": "Guidelines target illegal drugs/substances specifically; legal OTC supplement reviews citing label-printed dosing don't fall under that category — an overbroad automated flag."
+  },
+  {
+    "id": "case-018",
+    "category": "Hate speech & discrimination",
+    "original_action": "content_removal",
+    "content_summary": "Post argues against a specific piece of legislation affecting a religious group's practices, framed around policy/legal reasoning, with one sentence near the end expressing personal distrust of 'people like them'.",
+    "original_violation_reason": "Reported as discriminatory content.",
+    "user_appeal_statement": "This is a policy argument, the one line was taken out of context.",
+    "ground_truth_outcome": "escalate",
+    "rationale": "Mostly legitimate policy discourse but contains a genuinely borderline dehumanizing generalization — not clearly a slur/attack, not clearly innocuous either. Reasonable reviewers could disagree; appropriate for human escalation rather than automated confidence in either direction."
+  }
+]

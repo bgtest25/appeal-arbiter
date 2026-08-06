@@ -1,0 +1,9 @@
+.venv
+.git
+.pytest_cache
+chroma_data
+tests
+scripts
+terraform
+.env
+*.log

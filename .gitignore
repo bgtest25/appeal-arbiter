@@ -8,5 +8,4 @@ chroma_data/
 .terraform/
 *.tfstate
 *.tfstate.backup
-.terraform.lock.hcl
 *.log

@@ -1,0 +1,12 @@
+.venv
+.git
+.pytest_cache
+chroma_data
+tests
+scripts
+terraform
+*.tfstate
+*.tfstate.backup
+.terraform
+.env
+*.log
